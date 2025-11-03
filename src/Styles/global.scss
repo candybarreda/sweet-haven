@@ -1,0 +1,36 @@
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: "Merriweather", Georgia, serif;
+  color:$gray900;
+  background:$pastelama;
+}
+img{ max-width:100%; display:block; }
+
+.container{ width:min(1180px, 92%); margin:0 auto; }
+
+.section-title{
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  font-size:clamp(26px, 2.6vw, 38px);
+  color:$beige3; margin:0 0 26px 0;
+  img{ width:28px; height:28px; }
+}
+
+.btn{
+  border:none; cursor:pointer; font-weight:600;
+  transition:.2s transform ease, .2s box-shadow ease;
+  &:active{ transform:translateY(1px); }
+}
+.btn-primary{
+  background:$beige; color:$black; padding:10px 18px; border-radius:999px;
+}
+.btn-cream{
+  background:$vino; color:$white; padding:10px 18px; border-radius:999px;
+}
+.btn-chip{
+  background:$rojoMed; color:$white; padding:8px 14px; border-radius:22px;
+}
+
+.rounded{ border-radius:18px; }
+
+main{ overflow:hidden; } /* para adornos */

@@ -1,0 +1,24 @@
+.sh-cats{
+  background:$pastelama; padding:56px 0 64px; position:relative;
+
+  .ribbon{
+    height:22px; background:repeating-linear-gradient(90deg, #b43434 0 14px, #fff 14px 22px);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.06);
+    &.ribbon-top{ margin-bottom:28px; }
+    &.ribbon-bottom{ margin-top:28px; }
+  }
+
+  .grid{
+    display:grid; gap:28px; grid-template-columns:repeat(4,1fr);
+  }
+
+  .cat-card{
+    text-align:center;
+    img{ border-radius:18px; height:260px; width:100%; object-fit:cover; }
+    h3{ margin:14px 0 10px; font-weight:600; }
+    .btn-pill{ margin-top:6px; box-shadow: 0 3px 0 rgba(0,0,0,.2); }
+  }
+
+  @media (max-width: 1100px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width: 600px){ .grid{ grid-template-columns:1fr; } }
+}

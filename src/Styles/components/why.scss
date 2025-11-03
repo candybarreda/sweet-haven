@@ -1,0 +1,29 @@
+.sh-why{
+  background:$vino; color:$white; padding:70px 0;
+
+  .content{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center;
+    .text{
+      h2{ font-size:32px; margin:0 0 12px; }
+      p{ line-height:1.6; opacity:.95; }
+    }
+    .gallery{ 
+      width: 260px;
+      height: 260px;
+      display:flex; 
+      gap:18px;
+      .rounded{ border-radius:10px; }
+      grid-template-columns:1fr; /* stacked */
+    }
+  }
+
+  .features{
+    margin-top:36px; display:flex; gap:38px; justify-content:flex-start; align-items:center;
+    div{ display:flex; align-items:center; gap:8px; opacity:.95; }
+  }
+
+  @media (max-width: 992px){
+    .content{ grid-template-columns:1fr; }
+    .features{ flex-wrap:wrap; }
+  }
+}

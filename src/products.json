@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title":"Pastel Berry",
+    "price": 120,
+    "image": "/img/pastelberry.jpeg",
+    "thumbnail": "/img/pastelberry.jpeg",
+    "time": "48 horas",
+    "description": "Bizcocho de vainilla con crema de queso y bayas vibrantes."
+  },
+  {
+    "id": 2,
+    "title": "Torta de Chocolate",
+    "price": 150,
+    "image": "/img/chocomenta.jpg",
+    "thumbnail": "/img/chocomenta.jpg",
+    "time": "72 horas",
+    "description": "Fudge de chocolate con 55% cacao."
+  },
+
+  {
+    "id": 3,
+    "title": "New York style cheesecake",
+    "price": 150,
+    "image": "/img/chesecake.jpg",
+    "thumbnail": "/img/chesecake.jpg",
+    "time": "72 horas",
+    "description": "Cheesecake horneado con mermelada de berries."
+  },
+
+  {
+    "id": 4,
+    "title": "Pistacho & Frambuesa",
+    "price": 150,
+    "image": "/img/tortapistacho.jpg",
+    "thumbnail": "/img/tortapistacho.jpg",
+    "time": "72 horas",
+    "description": "Cheesecake horneado con mermelada de berries."
+  },
+  {
+    "id": 5,
+    "title": "Torta de Nutella", 
+    "price": 150,
+    "image": "/img/nutella.jpg",
+    "thumbnail": "/img/nutella.jpg",
+    "time": "72 horas",
+    "description": "Vainilla, chocolate y manjar."
+  },
+  {
+    "id": 6,
+    "title":  "Tarta Vasca", 
+    "price": 150,
+    "image": "/img/vasca.jpeg",
+    "thumbnail": "/img/vasca.jpeg",
+    "time": "72 horas",
+    "description":  "Receta tradicional vasca."
+  }
+]

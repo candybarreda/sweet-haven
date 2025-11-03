@@ -1,0 +1,21 @@
+.sh-featured{
+  background:$pastelama; padding:48px 0 64px;
+
+  .grid{
+    display:grid; gap:26px; grid-template-columns:repeat(3, 1fr);
+  }
+  .card{
+    background:$beige; border-radius:$radius; box-shadow:$shadow; overflow:hidden;
+    .thumb{ height:230px; img{ width:100%; height:100%; object-fit:cover; } }
+    .body{ padding:14px 16px 18px;
+      h3{ color:$rojoInt; margin:6px 0; font-size:18px; }
+      .desc{ font-size:14px; opacity:.8; min-height:42px; }
+      .meta{ display:flex; justify-content:space-between; align-items:center; margin-top:8px;
+        .price{ font-weight:700; color:$gray900; }
+      }
+    }
+  }
+
+  @media (max-width: 992px){ .grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width: 640px){ .grid{ grid-template-columns:1fr; } }
+}
