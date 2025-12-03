@@ -1,0 +1,71 @@
+.pago-online-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+.pedido-pendiente {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 10px;
+  border-radius: 4px;
+  color: #856404;
+}
+.monto {
+  font-weight: bold;
+  color: #d63384;
+}
+.resumen-pedido ul {
+  list-style: none;
+  padding: 0;
+  border-top: 1px dashed #ddd;
+  margin-top: 15px;
+}
+.resumen-pedido li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.resumen-pedido .total {
+  font-weight: bold;
+  font-size: 1.1em;
+  border-top: 2px solid #333;
+  padding-top: 10px;
+}
+.metodos-pago-selector {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.metodo-opcion {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.metodo-opcion:hover {
+  background-color: #f0f0f0;
+}
+#btn-pagar {
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+.icon-seguridad {
+  float: right;
+  color: green;
+  font-weight: bold;
+}

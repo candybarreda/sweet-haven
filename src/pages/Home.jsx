@@ -1,9 +1,10 @@
 import React from "react";
 import Hero from "../components/component/Hero";
-import Products from "../components/component/Products";
+import Producto from "../components/component/Producto";
 import WhyChooseUs from "../components/component/WhyChooseUs";
 import Categories from "../components/component/Categories";
 import { useCart } from "../context/cardContext";
+import Header from "../components/component/Header";
 
 function Home() {
 
@@ -15,12 +16,15 @@ function Home() {
   };   
 
   return (
+    <>
     <main>
       <Hero />
-      <Products onAddToCart={addToCart} />
+      <Producto onAddToCart={addToCart} />
       <WhyChooseUs />
       <Categories />
     </main>
+    </>
+    
   );      
 }
 

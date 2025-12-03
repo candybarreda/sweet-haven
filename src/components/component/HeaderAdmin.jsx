@@ -5,17 +5,18 @@ import { useAuth } from "../../context/authContext";
 //import  { menu } from '../component/Products'
 
 
-function Header({ cartCount, onCartClick, onUserClick }) {
+function HeaderAdmin({ cartCount, onCartClick, onUserClick }) {
   const { user, isAuthenticated, logout } = useAuth();
   
   return (
     <header className="sh-header">
       <div className="container">
         <nav className="sh-header__nav">
-          <ul className="left">
-            <li><Link to="/menu">Tradicionales</Link></li>
-            <li><Link to="/personalizados">Personalizados</Link></li>
-          </ul>
+        <ul className="left">
+          <li><Link to="/admin/gestionusuarios">Usuarios</Link></li>
+          <li><Link to="/admin/gestionpedidos">Pedidos</Link></li>
+          <li><Link to="/admin/gestionproductos">Productos</Link></li>
+        </ul>
 
           <div  className="brand"><Link to="/">
             <div className="brand__sup">Sweet</div>
@@ -46,19 +47,9 @@ function Header({ cartCount, onCartClick, onUserClick }) {
             )}
 
             {/* Favoritos */}
-            <li><a href="#" aria-label="Favoritos">♡</a></li>
-
+            
             {/* Carrito */}
-            <li>
-              <button
-                className="icon-btn"
-                onClick={onCartClick}
-                aria-label="Carrito"
-              >
-                🛒
-                {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
-              </button>
-            </li>
+           
           </ul>
         </nav>
       </div>
@@ -66,4 +57,4 @@ function Header({ cartCount, onCartClick, onUserClick }) {
   );
 }
 
-export default Header;
+export default HeaderAdmin;

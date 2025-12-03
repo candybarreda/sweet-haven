@@ -1,8 +1,10 @@
 import React, { createContext, useContext, useReducer } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 // Estado Inicial
 const initialState = {
-    cartItems: [],
+    cartItems: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
 };
 
 // Reducer (Función de gestión de estados)
@@ -14,11 +16,14 @@ const cartReducer = (state, action) => {
         
         case 'ADD_TO_CART':
             const itemToAdd = action.payload;
-            const existingItem = state.cartItems.find(item => item.id === itemToAdd.id);
+            const existingItem = state.cartItems.find(item => item.idProducto === itemToAdd.idProducto);
+            /*if(itemToAdd.categoria.nombre.toLowerCase() === 'personalizado') {
+                itemToAdd.products = (itemToAdd.products || []).push(action.payload.personalizaciones)
+            }*/
 
             if (existingItem) {
                 const updatedItems = state.cartItems.map(item =>
-                    item.id === itemToAdd.id
+                    item.idProducto === itemToAdd.idProducto
                         ? { ...item, quantity: item.quantity + 1 } 
                         : item
                 );
@@ -33,16 +38,19 @@ const cartReducer = (state, action) => {
         case 'REMOVE_ITEM':
             return {
                 ...state,
-                cartItems: state.cartItems.filter(item => item.id !== action.payload),
+                cartItems: state.cartItems.filter(item => item.idProducto !== action.payload),
             };
 
         case 'INCREASE_QUANTITY':
             return {
                 ...state,
-                cartItems: state.cartItems.map(item =>
-                    +item.id === +action.payload
+                cartItems: state.cartItems.map(item => {
+                    
+                    +item.idProducto === +action.payload
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
+                    }
+                    
                 ),
             };
 
@@ -50,7 +58,7 @@ const cartReducer = (state, action) => {
             return {
                 ...state,
                 cartItems: state.cartItems.reduce((acc, item) => {
-                    if (+item.id === +action.payload) {
+                    if (+item.idProducto === +action.payload) {
                         if (item.quantity > 1) {
                             acc.push({ ...item, quantity: item.quantity - 1 });
                         }
@@ -72,6 +80,11 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, initialState);
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(state.cartItems));
+    }, [state])
+
 
     return (
         <CartContext.Provider value={{ state, dispatch }}>

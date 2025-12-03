@@ -1,38 +1,71 @@
 import React, { useContext, useState } from "react";
 import { useAuth } from "../../context/authContext";
+import { useNavigate } from "react-router-dom";
+import Registro from "./Registro";
 
 const AuthModal = ({ show, onClose }) => {
-  const { login } = useAuth();
+  const { login,  registerUser} = useAuth();
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const [loginData, setLoginData] = useState({ username: "", password: "" });
+  const [loginData, setLoginData] = useState({
+    email: "",
+    contrasena: "",
+  });
 
-  const handleLogin = async () => {
-  try {
-    await login(loginData.username, loginData.password)
-   
-    } catch (error) {
-      console.error("Error:", error);
-    }
-};
-
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    direccion:"",
+    email: "",
+    contrasena: "",
+  });
   const [errors, setErrors] = useState({});
 
   if (!show) return null;
 
-  const handleChange = (field, value) => {
-    setFormData({ ...formData, [field]: value });
-    setErrors({ ...errors, [field]: "" }); 
-  };
+  //login
+
+    const handleLogin = async () => {
+      if (!loginData.email || !loginData.contrasena) {
+        alert("Ingresa tus credenciales");
+        return;
+      }
+
+    const res = await login(loginData.email, loginData.contrasena);
+
+      if (!res.success) {
+        alert(res.message);
+        return;
+      }
+
+      // cerrar modal
+      onClose();
+
+      // redirección por rol
+    const user = JSON.parse(localStorage.getItem("usuario"));
+
+      if (user.rol === "ADMIN") navigate("/admin/inventario");
+      else navigate("/");
+    };
+
+  
+
+    const handleChange = (field, value) => {
+      setFormData({ ...formData, [field]: value });
+      setErrors({ ...errors, [field]: "" }); 
+    };
 
   const validateStep3 = () => {
     let newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = "El nombre es obligatorio";
+    if (!formData.nombre.trim()) newErrors.nombre = "El nombre es obligatorio";
     if (!formData.last.trim()) newErrors.last = "El apellido es obligatorio";
-    if (!formData.idNumber.trim()) newErrors.idNumber = "El número de documento es obligatorio";
+    if (!formData.telefono.trim()) newErrors.telefono = "El número de documento es obligatorio";
     if (!formData.day) newErrors.day = "Selecciona un día";
     if (!formData.month) newErrors.month = "Selecciona un mes";
     if (!formData.year.trim()) newErrors.year = "El año es obligatorio";
+    if (!formData.email.trim()) newErrors.email = "El email es obligatorio";
 
     setErrors(newErrors);
 
@@ -43,6 +76,7 @@ const AuthModal = ({ show, onClose }) => {
   };
 
   return (
+    
     <div className="auth-overlay" onClick={onClose}>
       <div className="auth-modal" onClick={(e) => e.stopPropagation()}> 
         {/* Logo */}
@@ -73,13 +107,13 @@ const AuthModal = ({ show, onClose }) => {
               type="email"
               placeholder="Correo electrónico"
               value={loginData.email}
-              onChange={(e) => setLoginData({ ...loginData, username: e.target.value })}
+              onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
             />
             <input
               type="password"
               placeholder="Contraseña"
               value={loginData.contrasena}
-              onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+              onChange={(e) => setLoginData({ ...loginData, contrasena: e.target.value })}
             />
 
             <button className="btn-primary" onClick={handleLogin}>Ingresar</button>
@@ -87,117 +121,8 @@ const AuthModal = ({ show, onClose }) => {
         )}
 
         {/* Paso 3: Crear cuenta con validación */}
-        {step === 3 && (
-          <div className="auth-step">
-            <h2 className="welcome-title">Crea tu cuenta</h2>
+        {step === 3 && <Registro/>}
 
-            {/* Nombre */}
-            <input
-              type="text"
-              placeholder="Nombre"
-              value={formData.name}
-              onChange={(e) => handleChange("name", e.target.value)}
-            />
-            {errors.name && <p className="error-text">{errors.name}</p>}
-
-            {/* Apellido */}
-            <input
-              type="text"
-              placeholder="Apellido"
-              value={formData.last}
-              onChange={(e) => handleChange("last", e.target.value)}
-            />
-            {errors.last && <p className="error-text">{errors.last}</p>}
-
-            {/* Documento */}
-            <label className="label-tiny" htmlFor="id-number">
-              Documento de identidad
-            </label>
-            <div className="id-row">
-              <select className="id-type" defaultValue="DNI">
-                <option value="DNI">DNI</option>
-                <option value="CE">CE</option>
-                <option value="PAS">Pasaporte</option>
-              </select>
-              <input
-                type="text"
-                placeholder="Número"
-                value={formData.idNumber}
-                onChange={(e) => handleChange("idNumber", e.target.value)}
-              />
-            </div>
-            {errors.idNumber && <p className="error-text">{errors.idNumber}</p>}
-
-            {/* Fecha de nacimiento */}
-            <label className="label-tiny" htmlFor="dob-day">
-              Fecha de Nacimiento
-            </label>
-            <div className="dob-row">
-              <select
-                value={formData.day}
-                onChange={(e) => handleChange("day", e.target.value)}
-                className="short-input"
-              >
-                <option value="">Día</option>
-                {Array.from({ length: 30 }, (_, i) => i + 1).map((day) => (
-                  <option key={day} value={day}>{day}</option>
-                ))}
-              </select>
-
-              <select
-                value={formData.month}
-                onChange={(e) => handleChange("month", e.target.value)}
-                className="short-input"
-              >
-                <option value="">Mes</option>
-                {Array.from({ length: 12 }, (_, i) => i + 1).map((month) => (
-                  <option key={month} value={month}>{month}</option>
-                ))}
-              </select>
-
-              <input
-                type="text"
-                placeholder="Año"
-                className="short-input"
-                value={formData.year}
-                onChange={(e) => handleChange("year", e.target.value)}
-                inputMode="numeric"
-              />
-            </div>
-            {(errors.day || errors.month || errors.year) && (
-              <p className="error-text">
-                {errors.day || errors.month || errors.year}
-              </p>
-            )}
-
-            <button className="btn-primary" onClick={validateStep3}>
-              Continuar
-            </button>
-          </div>
-        )}
-
-        {/* Paso 4: Crear clave */}
-        {step === 4 && (
-          <div className="auth-step">
-            <h2 className="welcome-title red">Escribe una clave</h2>
-            <p className="info-text">Úsala para mantener tu seguridad</p>
-            <input type="email" placeholder="Correo electrónico" />
-            <input type="password" placeholder="Contraseña" />
-            <input type="password" placeholder="Confirmar contraseña" />
-
-            <label className="terms">
-              <input type="checkbox" />
-              <span>
-                Acepto sus Términos y Condiciones, así como el envío de
-                comunicación de la marca Sweet Haven y el tratamiento de mis
-                datos personales bajo las condiciones de la Política de
-                Privacidad.
-              </span>
-            </label>
-
-            <button className="btn-primary">Crear</button>
-          </div>
-        )}
       </div>
     </div>
   );

@@ -34,3 +34,343 @@ img{ max-width:100%; display:block; }
 .rounded{ border-radius:18px; }
 
 main{ overflow:hidden; } /* para adornos */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f6f4f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Caja del login y registro */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Caja principal */
+.auth-box {
+  background: #ffffff;
+  width: 380px;
+  padding: 35px 40px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------
+   LOGO SWEET HAVEN
+--------------------------------------------------- */
+.brand {
+  margin-bottom: 20px;
+}
+
+.brand__sup {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff577f;
+  margin-bottom: -8px;
+}
+
+.brand__main {
+  font-size: 36px;
+  font-weight: 800;
+  color: #333;
+}
+
+.brand__underline {
+  width: 60px;
+  height: 4px;
+  background: #ff577f;
+  margin: 6px auto 10px;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------------
+   INPUTS
+--------------------------------------------------- */
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff577f;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 87, 127, 0.2);
+}
+
+/* ---------------------------------------------------
+   BOTONES
+--------------------------------------------------- */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff577f;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ff3e6a;
+}
+
+/* Texto menor */
+.label-tiny {
+  display: block;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/* ---------------------------------------------------
+   FILA DE NÚMERO (telefono)
+--------------------------------------------------- */
+.id-row {
+  display: flex;
+  gap: 10px;
+}
+
+.id-type {
+  width: 100%;
+  padding: 12px;
+}
+
+/* ---------------------------------------------------
+   FECHA DE NACIMIENTO
+--------------------------------------------------- */
+.dob-row {
+  display: flex;
+  gap: 10px;
+}
+
+.short-input {
+  width: 33%;
+  padding: 12px;
+}
+
+/* ---------------------------------------------------
+   ERRORES
+--------------------------------------------------- */
+.error-text {
+  color: #d63031;
+  font-size: 13px;
+  margin-top: -5px;
+  text-align: left;
+}
+
+/* ---------------------------------------------------
+   TÉRMINOS
+--------------------------------------------------- */
+.terms {
+  display: flex;
+  align-items: flex-start;
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.terms input {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+}
+
+/* ---------------------------------------------------
+   ENLACE REGISTRO
+--------------------------------------------------- */
+.auth-box p {
+  margin-top: 15px;
+}
+
+.auth-box a {
+  color: #ff577f;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-box a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------
+   MODAL DE AUTENTICACIÓN
+--------------------------------------------------- */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.auth-modal {
+  background: #fff;
+  width: 380px;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Animación modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pantallas dentro del modal */
+.auth-step {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.info-text {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.red {
+  color: #ff577f;
+}
+// ===============================
+// ESTILOS PARA INVENTARIO
+// ===============================
+
+// Contenedor principal
+.container-fluid {
+  padding-bottom: 40px;
+
+  h1 {
+    font-weight: 700;
+    color: #333;
+  }
+}
+
+// Tarjetas
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+
+  .card-header {
+    background: #FFFEEA;
+    color: #C5B693  ;
+    font-weight: 600;
+    padding: 14px 18px;
+
+    i {
+      margin-right: 6px;
+    }
+  }
+
+  .card-body {
+    background: #fafafa;
+    padding: 20px 25px;
+  }
+}
+
+// Inputs
+.form-control,
+.form-select,
+textarea {
+  border-radius: 10px !important;
+  transition: all 0.2s ease;
+
+  &:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.25);
+  }
+}
+
+// Botones
+.btn {
+  border-radius: 8px !important;
+  font-weight: 500;
+
+  i {
+    margin-right: 6px;
+  }
+}
+
+// Tabla
+.table {
+  
+  thead {
+    th {
+      text-align: center;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      padding: 12px;
+    }
+  }
+
+  tbody {
+    td {
+      vertical-align: middle;
+      text-align: center;
+
+      button {
+        i {
+          margin-right: 3px;
+        }
+      }
+    }
+
+    tr:hover {
+      background: #f1f1f1;
+    }
+  }
+}
+
+// Badges de stock y estado
+.badge {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+// Contenedor de acciones
+.btn-warning,
+.btn-danger {
+  padding: 4px 10px;
+}

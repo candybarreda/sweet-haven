@@ -6,7 +6,7 @@
   }
   .card{
     background:$beige; border-radius:$radius; box-shadow:$shadow; overflow:hidden;
-    .thumb{ height:230px; img{ width:100%; height:100%; object-fit:cover; } }
+    .thumb{ height:230px; img{ width:100%; height:100%; object-fit:contain; } }
     .body{ padding:14px 16px 18px;
       h3{ color:$rojoInt; margin:6px 0; font-size:18px; }
       .desc{ font-size:14px; opacity:.8; min-height:42px; }

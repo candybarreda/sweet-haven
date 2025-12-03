@@ -1,23 +1,267 @@
 [
   {
     "id": 1,
-    "title":"Pastel Berry",
-    "price": 120,
-    "image": "/img/pastelberry.jpeg",
-    "thumbnail": "/img/pastelberry.jpeg",
-    "time": "48 horas",
-    "description": "Bizcocho de vainilla con crema de queso y bayas vibrantes."
+    "title": "Tarta Vintage Corazón",
+    "descripcion": "Tarta con decoración estilo Lambeth, ideal para aniversarios.",
+    "image": "/img/tortavintage.jpg",
+    "thumbnail": "/img/tortavintage.jpg",
+    "precioBase": 95.0,
+    "estado": "Disponible",
+    "price": 95.0,
+    "personalizaciones":[
+        {
+            "idPersonalizacion": 1,
+            "idCatPersonalizacion": 1,
+            "name": "8 Porciones",
+            "price": 0.0
+        },
+        {
+            "idPersonalizacion": 2,
+            "idCatPersonalizacion": 1,
+            "name": "10 Porciones",
+            "price": 0.0
+        },
+        {
+            "idPersonalizacion": 3,
+            "idCatPersonalizacion": 1,
+            "name": "15 Porciones",
+            "price": 8.5
+        },
+        {
+            "idPersonalizacion": 4,
+            "idCatPersonalizacion": 1,
+            "name": "20 Porciones",
+            "price": 15.0
+        },
+        {
+            "idPersonalizacion": 5,
+            "idCatPersonalizacion": 3,
+            "name": "Vainilla",
+            "price": 0.0
+        },
+        {
+            "idPersonalizacion": 6,
+            "idCatPersonalizacion": 3,
+            "name": "Chocolate",
+            "price": 0.0
+        },
+        {
+            "idPersonalizacion": 7,
+            "idCatPersonalizacion": 3,
+            "name": "Red Velvet",
+            "price": 8.0
+        },
+        {
+            "idPersonalizacion": 8,
+            "idCatPersonalizacion": 3,
+            "name": "Plátano y Nuez",
+            "price": 5.5
+        },
+        {
+            "idPersonalizacion": 9,
+            "idCatPersonalizacion": 3,
+            "name": "Pistacho",
+            "price": 12.0
+        },
+        {
+            "idPersonalizacion": 10,
+            "idCatPersonalizacion": 4,
+            "name": "Crema Chantilly",
+            "price": 0.0
+        },
+        {
+            "idPersonalizacion": 11,
+            "idCatPersonalizacion": 4,
+            "name": "Ganache de Chocolate Oscuro",
+            "price": 7.5
+        },
+        {
+            "idPersonalizacion": 12,
+            "idCatPersonalizacion": 4,
+            "name": "Mermelada de Frambuesa",
+            "price": 4.0
+        },
+        {
+            "idPersonalizacion": 13,
+            "idCatPersonalizacion": 4,
+            "name": "Crema de Queso y Nueces",
+            "price": 10.0
+        },
+        {
+            "idPersonalizacion": 14,
+            "idCatPersonalizacion": 4,
+            "name": "Mousse de Ron",
+            "price": 6.0
+        },
+        {
+            "idPersonalizacion": 15,
+            "idCatPersonalizacion": 2,
+            "name": "Tradicional",
+            "price": 0.0
+        },
+        {
+            "idPersonalizacion": 16,
+            "idCatPersonalizacion": 2,
+            "name": "sabores especiales",
+            "price": 30.0
+        },
+        {
+            "idPersonalizacion": 17,
+            "idCatPersonalizacion": 5,
+            "name": "Temática Minecraft (Bloques 2D)",
+            "price": 20.0
+        },
+        {
+            "idPersonalizacion": 18,
+            "idCatPersonalizacion": 5,
+            "name": "Temática Dragon Ball Z (Goku 2D)",
+            "price": 25.0
+        },
+        {
+            "idPersonalizacion": 19,
+            "idCatPersonalizacion": 5,
+            "name": "Temática Naruto ",
+            "price": 30.0
+        },
+        {
+            "idPersonalizacion": 21,
+            "idCatPersonalizacion": 5,
+            "name": "Temática Star Wars (Logo y colores)",
+            "price": 18.0
+        }
+    ]
   },
-  {
-    "id": 2,
-    "title": "Torta de Chocolate",
-    "price": 150,
-    "image": "/img/chocomenta.jpg",
-    "thumbnail": "/img/chocomenta.jpg",
-    "time": "72 horas",
-    "description": "Fudge de chocolate con 55% cacao."
-  },
+  {"id": 2,
+  "title": "Torta de Chocolate",
+  "price": 150,
+  "descripcion":"Fudge de chocolate con 55% cacao.",
+  "image": "/img/chocomenta.jpg",
+  "thumbnail": "/img/chocomenta.jpg",
+  "time": "72 horas",
+  "estado": "Disponible",
+  "personalizaciones":[
+    {
+        "idPersonalizacion": 1,
+        "idCatPersonalizacion": 1,
+        "name": "8 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 2,
+        "idCatPersonalizacion": 1,
+        "name": "10 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 3,
+        "idCatPersonalizacion": 1,
+        "name": "15 Porciones",
+        "price": 8.5
+    },
+    {
+        "idPersonalizacion": 4,
+        "idCatPersonalizacion": 1,
+        "name": "20 Porciones",
+        "price": 15.0
+    },
+    {
+        "idPersonalizacion": 5,
+        "idCatPersonalizacion": 3,
+        "name": "Vainilla",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 6,
+        "idCatPersonalizacion": 3,
+        "name": "Chocolate",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 7,
+        "idCatPersonalizacion": 3,
+        "name": "Red Velvet",
+        "price": 8.0
+    },
+    {
+        "idPersonalizacion": 8,
+        "idCatPersonalizacion": 3,
+        "name": "Plátano y Nuez",
+        "price": 5.5
+    },
+    {
+        "idPersonalizacion": 9,
+        "idCatPersonalizacion": 3,
+        "name": "Pistacho",
+        "price": 12.0
+    },
+    {
+        "idPersonalizacion": 10,
+        "idCatPersonalizacion": 4,
+        "name": "Crema Chantilly",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 11,
+        "idCatPersonalizacion": 4,
+        "name": "Ganache de Chocolate Oscuro",
+        "price": 7.5
+    },
+    {
+        "idPersonalizacion": 12,
+        "idCatPersonalizacion": 4,
+        "name": "Mermelada de Frambuesa",
+        "price": 4.0
+    },
+    {
+        "idPersonalizacion": 13,
+        "idCatPersonalizacion": 4,
+        "name": "Crema de Queso y Nueces",
+        "price": 10.0
+    },
+    {
+        "idPersonalizacion": 14,
+        "idCatPersonalizacion": 4,
+        "name": "Mousse de Ron",
+        "price": 6.0
+    },
+    {
+        "idPersonalizacion": 15,
+        "idCatPersonalizacion": 2,
+        "name": "Tradicional",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 16,
+        "idCatPersonalizacion": 2,
+        "name": "sabores especiales",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 17,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Minecraft (Bloques 2D)",
+        "price": 20.0
+    },
+    {
+        "idPersonalizacion": 18,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Dragon Ball Z (Goku 2D)",
+        "price": 25.0
+    },
+    {
+        "idPersonalizacion": 19,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Naruto ",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 21,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Star Wars (Logo y colores)",
+        "price": 18.0
+    }]
 
+  },
   {
     "id": 3,
     "title": "New York style cheesecake",
@@ -25,26 +269,393 @@
     "image": "/img/chesecake.jpg",
     "thumbnail": "/img/chesecake.jpg",
     "time": "72 horas",
-    "description": "Cheesecake horneado con mermelada de berries."
-  },
+    "description": "Cheesecake horneado con mermelada de berries.",
+  "estado": "Disponible",
+  "personalizaciones":[
+    {
+        "idPersonalizacion": 1,
+        "idCatPersonalizacion": 1,
+        "name": "8 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 2,
+        "idCatPersonalizacion": 1,
+        "name": "10 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 3,
+        "idCatPersonalizacion": 1,
+        "name": "15 Porciones",
+        "price": 8.5
+    },
+    {
+        "idPersonalizacion": 4,
+        "idCatPersonalizacion": 1,
+        "name": "20 Porciones",
+        "price": 15.0
+    },
+    {
+        "idPersonalizacion": 5,
+        "idCatPersonalizacion": 3,
+        "name": "Vainilla",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 6,
+        "idCatPersonalizacion": 3,
+        "name": "Chocolate",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 7,
+        "idCatPersonalizacion": 3,
+        "name": "Red Velvet",
+        "price": 8.0
+    },
+    {
+        "idPersonalizacion": 8,
+        "idCatPersonalizacion": 3,
+        "name": "Plátano y Nuez",
+        "price": 5.5
+    },
+    {
+        "idPersonalizacion": 9,
+        "idCatPersonalizacion": 3,
+        "name": "Pistacho",
+        "price": 12.0
+    },
+    {
+        "idPersonalizacion": 10,
+        "idCatPersonalizacion": 4,
+        "name": "Crema Chantilly",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 11,
+        "idCatPersonalizacion": 4,
+        "name": "Ganache de Chocolate Oscuro",
+        "price": 7.5
+    },
+    {
+        "idPersonalizacion": 12,
+        "idCatPersonalizacion": 4,
+        "name": "Mermelada de Frambuesa",
+        "price": 4.0
+    },
+    {
+        "idPersonalizacion": 13,
+        "idCatPersonalizacion": 4,
+        "name": "Crema de Queso y Nueces",
+        "price": 10.0
+    },
+    {
+        "idPersonalizacion": 14,
+        "idCatPersonalizacion": 4,
+        "name": "Mousse de Ron",
+        "price": 6.0
+    },
+    {
+        "idPersonalizacion": 15,
+        "idCatPersonalizacion": 2,
+        "name": "Tradicional",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 16,
+        "idCatPersonalizacion": 2,
+        "name": "sabores especiales",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 17,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Minecraft (Bloques 2D)",
+        "price": 20.0
+    },
+    {
+        "idPersonalizacion": 18,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Dragon Ball Z (Goku 2D)",
+        "price": 25.0
+    },
+    {
+        "idPersonalizacion": 19,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Naruto ",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 21,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Star Wars (Logo y colores)",
+        "price": 18.0
+    }]
 
-  {
-    "id": 4,
+
+  },
+  {"id": 4,
     "title": "Pistacho & Frambuesa",
     "price": 150,
     "image": "/img/tortapistacho.jpg",
     "thumbnail": "/img/tortapistacho.jpg",
     "time": "72 horas",
-    "description": "Cheesecake horneado con mermelada de berries."
-  },
-  {
+    "description": "Cheesecake horneado con mermelada de berries.",
+    "estado": "Disponible",
+    "personalizaciones":[
+    {
+        "idPersonalizacion": 1,
+        "idCatPersonalizacion": 1,
+        "name": "8 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 2,
+        "idCatPersonalizacion": 1,
+        "name": "10 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 3,
+        "idCatPersonalizacion": 1,
+        "name": "15 Porciones",
+        "price": 8.5
+    },
+    {
+        "idPersonalizacion": 4,
+        "idCatPersonalizacion": 1,
+        "name": "20 Porciones",
+        "price": 15.0
+    },
+    {
+        "idPersonalizacion": 5,
+        "idCatPersonalizacion": 3,
+        "name": "Vainilla",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 6,
+        "idCatPersonalizacion": 3,
+        "name": "Chocolate",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 7,
+        "idCatPersonalizacion": 3,
+        "name": "Red Velvet",
+        "price": 8.0
+    },
+    {
+        "idPersonalizacion": 8,
+        "idCatPersonalizacion": 3,
+        "name": "Plátano y Nuez",
+        "price": 5.5
+    },
+    {
+        "idPersonalizacion": 9,
+        "idCatPersonalizacion": 3,
+        "name": "Pistacho",
+        "price": 12.0
+    },
+    {
+        "idPersonalizacion": 10,
+        "idCatPersonalizacion": 4,
+        "name": "Crema Chantilly",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 11,
+        "idCatPersonalizacion": 4,
+        "name": "Ganache de Chocolate Oscuro",
+        "price": 7.5
+    },
+    {
+        "idPersonalizacion": 12,
+        "idCatPersonalizacion": 4,
+        "name": "Mermelada de Frambuesa",
+        "price": 4.0
+    },
+    {
+        "idPersonalizacion": 13,
+        "idCatPersonalizacion": 4,
+        "name": "Crema de Queso y Nueces",
+        "price": 10.0
+    },
+    {
+        "idPersonalizacion": 14,
+        "idCatPersonalizacion": 4,
+        "name": "Mousse de Ron",
+        "price": 6.0
+    },
+    {
+        "idPersonalizacion": 15,
+        "idCatPersonalizacion": 2,
+        "name": "Tradicional",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 16,
+        "idCatPersonalizacion": 2,
+        "name": "sabores especiales",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 17,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Minecraft (Bloques 2D)",
+        "price": 20.0
+    },
+    {
+        "idPersonalizacion": 18,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Dragon Ball Z (Goku 2D)",
+        "price": 25.0
+    },
+    {
+        "idPersonalizacion": 19,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Naruto ",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 21,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Star Wars (Logo y colores)",
+        "price": 18.0
+    }]
+
+},
+{
     "id": 5,
     "title": "Torta de Nutella", 
     "price": 150,
     "image": "/img/nutella.jpg",
     "thumbnail": "/img/nutella.jpg",
     "time": "72 horas",
-    "description": "Vainilla, chocolate y manjar."
+    "description": "Vainilla, chocolate y manjar.",
+    "estado": "Disponible",
+    "personalizaciones":[
+    {
+        "idPersonalizacion": 1,
+        "idCatPersonalizacion": 1,
+        "name": "8 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 2,
+        "idCatPersonalizacion": 1,
+        "name": "10 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 3,
+        "idCatPersonalizacion": 1,
+        "name": "15 Porciones",
+        "price": 8.5
+    },
+    {
+        "idPersonalizacion": 4,
+        "idCatPersonalizacion": 1,
+        "name": "20 Porciones",
+        "price": 15.0
+    },
+    {
+        "idPersonalizacion": 5,
+        "idCatPersonalizacion": 3,
+        "name": "Vainilla",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 6,
+        "idCatPersonalizacion": 3,
+        "name": "Chocolate",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 7,
+        "idCatPersonalizacion": 3,
+        "name": "Red Velvet",
+        "price": 8.0
+    },
+    {
+        "idPersonalizacion": 8,
+        "idCatPersonalizacion": 3,
+        "name": "Plátano y Nuez",
+        "price": 5.5
+    },
+    {
+        "idPersonalizacion": 9,
+        "idCatPersonalizacion": 3,
+        "name": "Pistacho",
+        "price": 12.0
+    },
+    {
+        "idPersonalizacion": 10,
+        "idCatPersonalizacion": 4,
+        "name": "Crema Chantilly",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 11,
+        "idCatPersonalizacion": 4,
+        "name": "Ganache de Chocolate Oscuro",
+        "price": 7.5
+    },
+    {
+        "idPersonalizacion": 12,
+        "idCatPersonalizacion": 4,
+        "name": "Mermelada de Frambuesa",
+        "price": 4.0
+    },
+    {
+        "idPersonalizacion": 13,
+        "idCatPersonalizacion": 4,
+        "name": "Crema de Queso y Nueces",
+        "price": 10.0
+    },
+    {
+        "idPersonalizacion": 14,
+        "idCatPersonalizacion": 4,
+        "name": "Mousse de Ron",
+        "price": 6.0
+    },
+    {
+        "idPersonalizacion": 15,
+        "idCatPersonalizacion": 2,
+        "name": "Tradicional",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 16,
+        "idCatPersonalizacion": 2,
+        "name": "sabores especiales",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 17,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Minecraft (Bloques 2D)",
+        "price": 20.0
+    },
+    {
+        "idPersonalizacion": 18,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Dragon Ball Z (Goku 2D)",
+        "price": 25.0
+    },
+    {
+        "idPersonalizacion": 19,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Naruto ",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 21,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Star Wars (Logo y colores)",
+        "price": 18.0
+    }]
   },
   {
     "id": 6,
@@ -53,6 +664,129 @@
     "image": "/img/vasca.jpeg",
     "thumbnail": "/img/vasca.jpeg",
     "time": "72 horas",
-    "description":  "Receta tradicional vasca."
+    "description":  "Receta tradicional vasca.",
+    "estado": "Disponible",
+    "personalizaciones":[
+    {
+        "idPersonalizacion": 1,
+        "idCatPersonalizacion": 1,
+        "name": "8 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 2,
+        "idCatPersonalizacion": 1,
+        "name": "10 Porciones",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 3,
+        "idCatPersonalizacion": 1,
+        "name": "15 Porciones",
+        "price": 8.5
+    },
+    {
+        "idPersonalizacion": 4,
+        "idCatPersonalizacion": 1,
+        "name": "20 Porciones",
+        "price": 15.0
+    },
+    {
+        "idPersonalizacion": 5,
+        "idCatPersonalizacion": 3,
+        "name": "Vainilla",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 6,
+        "idCatPersonalizacion": 3,
+        "name": "Chocolate",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 7,
+        "idCatPersonalizacion": 3,
+        "name": "Red Velvet",
+        "price": 8.0
+    },
+    {
+        "idPersonalizacion": 8,
+        "idCatPersonalizacion": 3,
+        "name": "Plátano y Nuez",
+        "price": 5.5
+    },
+    {
+        "idPersonalizacion": 9,
+        "idCatPersonalizacion": 3,
+        "name": "Pistacho",
+        "price": 12.0
+    },
+    {
+        "idPersonalizacion": 10,
+        "idCatPersonalizacion": 4,
+        "name": "Crema Chantilly",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 11,
+        "idCatPersonalizacion": 4,
+        "name": "Ganache de Chocolate Oscuro",
+        "price": 7.5
+    },
+    {
+        "idPersonalizacion": 12,
+        "idCatPersonalizacion": 4,
+        "name": "Mermelada de Frambuesa",
+        "price": 4.0
+    },
+    {
+        "idPersonalizacion": 13,
+        "idCatPersonalizacion": 4,
+        "name": "Crema de Queso y Nueces",
+        "price": 10.0
+    },
+    {
+        "idPersonalizacion": 14,
+        "idCatPersonalizacion": 4,
+        "name": "Mousse de Ron",
+        "price": 6.0
+    },
+    {
+        "idPersonalizacion": 15,
+        "idCatPersonalizacion": 2,
+        "name": "Tradicional",
+        "price": 0.0
+    },
+    {
+        "idPersonalizacion": 16,
+        "idCatPersonalizacion": 2,
+        "name": "sabores especiales",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 17,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Minecraft (Bloques 2D)",
+        "price": 20.0
+    },
+    {
+        "idPersonalizacion": 18,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Dragon Ball Z (Goku 2D)",
+        "price": 25.0
+    },
+    {
+        "idPersonalizacion": 19,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Naruto ",
+        "price": 30.0
+    },
+    {
+        "idPersonalizacion": 21,
+        "idCatPersonalizacion": 5,
+        "name": "Temática Star Wars (Logo y colores)",
+        "price": 18.0
+    }]
   }
+
 ]

@@ -1,16 +1,25 @@
 import React from "react";
-import Products from "../components/component/Products";
-import WhyChooseUs from "../components/component/WhyChooseUs";
+import Producto from "../components/component/Producto";
+import { useCart } from "../context/cardContext";
 
 function Menu(){
 
-  return (
-    <main>
-      
-    <Products></Products>
-    
-    </main>
+  const { dispatch } = useCart();
 
+  const addToCart = (product) => {
+    dispatch({ type: 'ADD_TO_CART', payload: product });
+  };
+
+  return (
+    <>
+      <main>
+        
+        <Producto categoryId={1} onAddToCart={addToCart}></Producto>
+      
+      </main>
+
+    </>
+    
     
   )
 
